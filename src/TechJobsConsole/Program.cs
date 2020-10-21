@@ -119,6 +119,10 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
+            if(someJobs.Count == 0)
+            {
+                Console.WriteLine('\n'+"**  No jobs found! **");
+            }
             foreach(Dictionary<string, string> job in someJobs)
             {
                 Console.WriteLine("*****"+'\n'+"name:            "+job["name"]
